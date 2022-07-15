@@ -1,24 +1,18 @@
-const spollers = document.querySelectorAll(".block__title");
-const spollersText = document.querySelectorAll(".block__text");
+const spollers = document.querySelectorAll('.block__item');
+console.log(spollers);
 
-spollers.forEach(function(item) {
-	item.addEventListener("click", function(){
-		let openTitle = item;
-		let textId = openTitle.getAttribute("data-text");
-		let openText = document.querySelector(textId);
+spollers.forEach(function(spoller) {
 
-		if (!openTitle.classList.contains('active')){ //Убирает проверку класса при нажатии
-			
-		};
-			/*spollers.forEach(function(item){
-			item.classList.remove('active');
-			});
+	const btn = spoller.querySelector('.block__title');
 
-			spollersText.forEach(function(item){
-			item.classList.remove('block__text--active');
-			});*/
+	btn.addEventListener("click", function(){
 
-			openTitle.classList.toggle('active');
-			openText.classList.toggle('block__text--active');
+		spollers.forEach(function(item){
+			if(item !== spoller){
+				item.classList.remove("active");
+			}
+		});
+
+		spoller.classList.toggle("active");
 	});
 });

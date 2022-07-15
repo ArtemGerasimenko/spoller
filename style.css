@@ -52,6 +52,6 @@
 	padding-top: 10px;
 }
 
-.block__text--active{
+.active .block__text {
 	display: block;
 }
