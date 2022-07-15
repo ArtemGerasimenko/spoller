@@ -37,12 +37,12 @@
 	left: 8px;
 }
 
-.active::before{
+.active .block__title::before{
 	background-color: red;
 	transform: rotate(-40deg);
 }
 
-.active::after{
+.active .block__title::after{
 	background-color: red;
 	transform: rotate(40deg);
 }
